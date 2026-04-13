@@ -1,0 +1,139 @@
+/*variables*/
+:root{
+    --primary:#caf0f8;
+    --secondary:#023e8a;
+    --accent1:#48cae4;
+    --accent2:#0077b6;
+}
+/*reset*/
+body,a,li,ul{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+/*base styles*/
+body{
+    background-color: var(--secondary);
+    overflow-x: hidden;
+    font-family: "Lato blackitalic";
+}
+.button{
+    background: none;
+    border-radius: 20px;
+    border: 2px solid var(--accent1);
+    padding: 6px 12px;
+    text-transform: uppercase;
+    box-shadow: 2px 3px 4px rgba(0,0,0,0.6);
+    display: inline-block;
+}
+.button:hover{
+    background: var(--accent2);
+    color: var(--primary);
+    transition: background 0.4s ease-in-out;
+}
+input{
+    background: rgba(8, 88, 134, 0.315);
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 2px solid rgb(53, 35, 35);
+    color: rgba(72, 21, 92, 0.637);
+}
+.add-task.show{
+    display: block;
+}
+/*Fonts*/
+@font-face {
+    font-family: "Lato blackitalic";
+    src: url(assets/font/Lato-BlackItalic.ttf);
+}
+h1,h2,h3,h4{
+    color: var(--primary);
+    font-weight: normal;
+}
+p,a,li{
+    color: var(--accent1);
+}
+h1,h3{
+    font-size: 1.9em;
+}
+h2{
+    font-size: 1.6em;
+}
+h4{
+    font-size: 1em;
+}
+/*Mobile Styles*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+}
+.navi{
+    background-color: var(--accent1);
+    text-align: center;
+    height: 100%;
+    padding: 1px 0px;
+}
+.grid .date{
+    grid-row: 1;
+    text-align: center;
+    grid-column: 1/9;
+    margin: 12px;
+}
+.grid .task{
+    grid-column: 1/5;
+    grid-row: 2;
+    padding: 0 0 0 20px;
+}
+.grid ul{
+    grid-column: 5/9;
+    grid-row: 2;
+    padding: 0 0 0 20px;
+}
+.eve-task{
+    color: var(--accent2);
+}
+.eve-task:hover,.all-task:hover,.priority:hover,.complete:hover{
+  cursor: pointer;
+}
+#tasks{
+    text-align: center;
+}
+.Morning, .Afternoon, .Evening, .Completed{
+   background-color: var(--accent2);
+   margin: 0px 50px ;
+   border-radius: 20px;
+   padding: 0px 0px 20px 0px;
+}
+#tasks li{
+    border: 1px solid var(--primary);
+    padding: 20px;
+    margin: 10px 50px;
+    border-radius: 10px;
+}
+#buttons{
+    text-align: center;
+}
+.un,.clr,.exp{
+    cursor: pointer;
+    padding: 12px 16px;
+    margin: 80px 28px;
+    font-weight: 700;
+    border-radius: 8px;
+    color: var(--secondary);
+    background-color: var(--primary);
+    border: 1px solid var(--accent2);
+}
+.un:hover,.clr:hover,.exp:hover{
+    cursor: pointer;
+    color: var(--accent1);
+    background-color: var(--accent2);
+    border: 1px solid var(--secondary);
+}
+/*Small Tablet Styles*/
+/*Large Tablet & Laptop Styles*/
+/*Desktop Styles*/
