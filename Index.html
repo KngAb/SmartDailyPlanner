@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="navi">
+        <nav>
+            <h1>Smart Planner</h1>
+        </nav>
+    </header>
+    <section id="date" class="grid">
+        <div class="date">Today's Date</div>
+        <span class="task ">Quick Add Task</span>
+        <form class="add-task" action="" hidden>
+            <input type="text" placeholder="Put your task in here" id="task-input" required>
+            <input type="radio" name="time" value="Morning" id="time" >Morning
+            <input type="radio" name="time" value="Afternoon" id="time" checked>Afternoon
+            <input type="radio" name="time" value="Evening" id="time">Evening
+            <input type="radio" name="priority" id="priority" value="priority" checked>Priority
+             <input type="radio" name="priority" id="priority" value="non-priority" >Non-Priority
+            <input type="submit" value="Add" id="" class="button"> 
+        </form>
+        <ul class="filter ">
+            <li class="eve-task">All Tasks</li>
+            <li class="all-task">Undone Tasks</li>
+            <li class="complete">Completed Tasks</li>
+            <li class="priority">Priority Task</li>
+        </ul>
+    </section>
+    <section id="tasks">
+        <div class="Morning">
+            <h3>Morning</h3>
+            <ul class="m-task"></ul>
+        </div>
+        <div class="Afternoon">
+            <h3>Afternoon</h3>
+            <ul class="a-task"></ul>
+
+        </div>
+        <div class="Evening">
+            <h3>Evening</h3>
+            <ul class="e-task"></ul>
+
+        </div>
+        <div class="Completed">
+            <h3>Completed</h3>
+            <ul class="c-task"></ul>
+        </div>
+    </section>
+    <section id="buttons">
+        <button class="un">Undo</button>
+        <button class="exp">Export</button>
+        <button class="clr">Clear All</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
